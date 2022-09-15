@@ -24,7 +24,11 @@ const s3Client = new S3Client(s3Config)
 const app = fastify()
 app.register(fastifyS3BucketsPlugin, {
     s3Client,
-    buckets: [{ Bucket: 'abc' }, { Bucket: 'def' }, { Bucket: 'ghi' }],
+    buckets: [
+        { Bucket: 'abc', ACL: 'private' },
+        { Bucket: 'def', ACL: 'private' },
+        { Bucket: 'ghi', ACL: 'private' }
+    ],
 })
 await app.ready() // missing buckets will be created here
 
