@@ -1,0 +1,57 @@
+{
+  "name": "fastify-s3-buckets",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "aws:local:start": "docker compose up -d localstack",
+    "test": "jest --config=jest.config.json",
+    "test:coverage": "jest --config=jest.config.json --coverage",
+    "test:ci": "npm run lint && npm run test:typescript && npm run test:coverage",
+    "test:typescript": "tsd",
+    "lint": "eslint \"lib/**/*.js\" lib/index.js",
+    "prettier": "prettier --write \"{lib,test}/**/*.js\" lib/index.js lib/index.d.ts"
+  },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.170.0"
+  },
+  "dependencies": {
+    "fastify-plugin": "^4.2.1"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.170.0",
+    "@types/jest": "^29.0.2",
+    "@types/node": "^18.7.18",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fastify": "^4.6.0",
+    "jest": "^29.0.3",
+    "prettier": "^2.7.1",
+    "s3-test-helper": "^1.2.0",
+    "tsd": "^0.24.1"
+  },
+  "homepage": "http://github.com/kibertoad/fastify-s3-buckets",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kibertoad/fastify-s3-buckets.git"
+  },
+  "keywords": [
+    "creation",
+    "create",
+    "bucket",
+    "buckets",
+    "fastify",
+    "s3",
+    "aws"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "lib/*",
+    "!lib/index.test-d.ts"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

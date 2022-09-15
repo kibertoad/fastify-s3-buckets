@@ -1,0 +1,30 @@
+{
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json"
+  ],
+  "testMatch": [
+    "<rootDir>/test/**/*.(spec|test).js"
+  ],
+  "testEnvironment": "node",
+  "reporters": [
+    "default"
+  ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/node_modules/",
+    "<rootDir>/coverage/",
+    "<rootDir>/test/"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 90,
+      "branches": 100,
+      "functions": 80,
+      "lines": 90
+    }
+  },
+  "collectCoverageFrom": [
+    "lib/**/*.js"
+  ]
+}
