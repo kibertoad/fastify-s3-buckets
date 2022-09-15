@@ -1,7 +1,6 @@
 name: ci
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -35,7 +34,7 @@ jobs:
 
       - name: Docker stop
         run: |
-          npm run docker:stop          
+          docker compose down          
 
   automerge:
     needs: build
