@@ -24,9 +24,18 @@ jobs:
       - name: Install
         run: |
           npm install
+
+      - name: Docker start
+        run: |
+          docker compose up -d localstack
+
       - name: Run Tests
         run: |
           npm run test:ci
+
+      - name: Docker stop
+        run: |
+          npm run docker:stop          
 
   automerge:
     needs: build
