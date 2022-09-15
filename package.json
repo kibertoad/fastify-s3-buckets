@@ -1,5 +1,6 @@
 {
   "name": "fastify-s3-buckets",
+  "description": "Fastify plugin for ensuring existence of defined AWS S3 buckets on the application startup",
   "version": "1.0.0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

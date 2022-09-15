@@ -1,6 +1,6 @@
 const fastify = require('fastify')
 const { fastifyS3BucketsPlugin } = require('../lib')
-const { S3Client, ListBucketsCommand } = require('@aws-sdk/client-s3')
+const { S3Client } = require('@aws-sdk/client-s3')
 const { S3TestHelper } = require('s3-test-helper')
 
 const s3Config = {
