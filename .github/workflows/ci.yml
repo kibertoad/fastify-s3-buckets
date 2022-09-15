@@ -1,7 +1,6 @@
 name: ci
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -11,7 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14, 16, 18]
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [ubuntu-latest]
 
     steps:
       - uses: actions/checkout@v3
@@ -24,9 +23,18 @@ jobs:
       - name: Install
         run: |
           npm install
+
+      - name: Docker start
+        run: |
+          docker compose up -d localstack
+
       - name: Run Tests
         run: |
           npm run test:ci
+
+      - name: Docker stop
+        run: |
+          docker compose down          
 
   automerge:
     needs: build
