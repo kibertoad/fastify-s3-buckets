@@ -26,7 +26,7 @@ app.register(fastifyS3BucketsPlugin, {
     s3Client,
     buckets: [
         { Bucket: 'abc', ACL: 'private' },
-        { Bucket: 'def', ACL: 'private' },
+        { Bucket: 'def', ACL: 'public-read' },
         { Bucket: 'ghi', ACL: 'private' }
     ],
 })
