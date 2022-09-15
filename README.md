@@ -2,7 +2,7 @@
 Fastify plugin for ensuring existence of defined AWS S3 buckets on the application startup.
 
 [![NPM Version](https://img.shields.io/npm/v/fastify-s3-buckets.svg)](https://npmjs.org/package/fastify-s3-buckets)
-[![Build Status](https://github.com/kibertoad/fastify-s3-buckets/workflows/CI/badge.svg)](https://github.com/kibertoad/fastify-s3-buckets/actions)
+[![Build Status](https://github.com/kibertoad/fastify-s3-buckets/workflows/ci/badge.svg)](https://github.com/kibertoad/fastify-s3-buckets/actions)
 
 ## How to use?
 
