@@ -12,7 +12,6 @@ services:
       - DATA_DIR=${DATA_DIR-}
       - DOCKER_HOST=unix:///var/run/docker.sock
       - LOCALSTACK_HOST=localstack
-    #      - LOCALSTACK_API_KEY=someDummyKey
     volumes:
       - '${TMPDIR:-/tmp}/localstack:/var/log/localstack'
       - '/var/run/docker.sock:/var/run/docker.sock'
