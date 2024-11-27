@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 19.x]
+        node-version: [18.x, 20.x, 22.x, 23.x]
         os: [ubuntu-latest]
 
     steps:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Docker start
         run: |
-          docker compose up -d localstack
+          docker compose up -d --quiet-pull localstack
 
       - name: Run Tests
         run: |

@@ -60,7 +60,7 @@ describe('fastifyS3BucketsPlugin', () => {
     })
 
     expect(bucketsNames).toEqual(['def', 'xyz', 'abc', 'ghi'])
-  })
+  }, 10000)
 
   it('closes connection without throwing an error', async () => {
     const app = fastify()
